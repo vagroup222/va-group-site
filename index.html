@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="VA Group: virtual assistants for small businesses in London. Calendar, email, finding clients and social media. From £250 a month. Book a free 30-minute consultation.">
+<meta property="og:title" content="VA Group — Virtual assistants in London">
+<meta property="og:description" content="We handle the routine. You focus on strategy. From £250 a month, start within a week.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1E5B5B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 106 100'%3E%3Cpath d='M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2' fill='none' stroke='%231E5B5B' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='66' cy='62' r='6.3' fill='%23E8795A'/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>VA Group — Virtual assistants in London</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rubik:wght@500;600&display=swap">
+<style>
+/* Layout: the deck as one scroll — ivory sections alternate with teal bands at the cover, the savings numbers and the call to action; 1120px column, left-aligned text. */
+:root {
+  --bg: #F8F4EE;          /* warm ivory */
+  --surface: #FFFFFF;
+  --card: #CFE3DC;        /* sage */
+  --ink: #1F2A2E;         /* graphite */
+  --muted: #5F6B70;       /* slate */
+  --brand: #1E5B5B;       /* deep teal */
+  --brand-2: #2F7D79;
+  --accent: #E8795A;      /* coral: shapes, buttons, never text on light */
+  --accent-hover: #EE8B6F;
+  --on-accent: #1F2A2E;
+  --line: rgba(30, 91, 91, .16);
+  --band: #1E5B5B;
+  --band-ink: #F8F4EE;
+  --band-muted: #CFE3DC;
+  --band-line: rgba(207, 227, 220, .22);
+  --mark-line: #1E5B5B;
+  --header-bg: rgba(248, 244, 238, .88);
+  --font-display: "Rubik", "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --radius: 24px;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101B1B; --surface: #152424; --card: #1B2F2E; --ink: #ECE6DC; --muted: #A2AFAD;
+    --brand: #82C4BC; --brand-2: #66ADA5; --accent: #E8795A; --on-accent: #1F2A2E;
+    --line: rgba(207, 227, 220, .14); --band: #173F3F; --band-ink: #F8F4EE; --band-muted: #BCD8CF;
+    --band-line: rgba(207, 227, 220, .2); --mark-line: #82C4BC; --header-bg: rgba(16, 27, 27, .88);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101B1B; --surface: #152424; --card: #1B2F2E; --ink: #ECE6DC; --muted: #A2AFAD;
+  --brand: #82C4BC; --brand-2: #66ADA5; --accent: #E8795A; --on-accent: #1F2A2E;
+  --line: rgba(207, 227, 220, .14); --band: #173F3F; --band-ink: #F8F4EE; --band-muted: #BCD8CF;
+  --band-line: rgba(207, 227, 220, .2); --mark-line: #82C4BC; --header-bg: rgba(16, 27, 27, .88);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 17px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(30px, 4.4vw, 48px); line-height: 1.12; }
+h3 { font-size: 21px; line-height: 1.25; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: 100%; max-width: calc(var(--wrap) + 2 * clamp(16px, 4vw, 40px)); margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); }
+.section { padding-block: clamp(64px, 9vw, 112px); }
+.section + .section { padding-top: 0; }
+.band { background: var(--band); color: var(--band-ink); position: relative; overflow: hidden; }
+.band + .section, .section + .band { padding-top: clamp(64px, 9vw, 112px); }
+.stack { display: grid; gap: 20px; }
+.head { display: grid; gap: 12px; max-width: 760px; margin-bottom: clamp(32px, 4vw, 48px); }
+.eyebrow { font: 600 13px/1.3 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--brand); }
+.band .eyebrow { color: var(--band-muted); }
+.lead { font-size: clamp(18px, 1.6vw, 20px); line-height: 1.55; max-width: 62ch; }
+.note { font-size: 14px; line-height: 1.5; color: var(--muted); max-width: 80ch; }
+.band .note { color: var(--band-muted); }
+.rule { width: 48px; height: 4px; border-radius: 4px; background: var(--accent); }
+
+/* Logo lockup: mark ≈ 1.07 × cap height, 0.3em gap, Rubik SemiBold −0.02em */
+.lockup { display: inline-flex; align-items: center; gap: .3em; text-decoration: none; font: 600 22px/1 var(--font-display); letter-spacing: -0.02em; color: var(--ink); }
+.mark { height: .92em; width: auto; flex: none; overflow: visible; }
+.mark .ln { fill: none; stroke: var(--mark-line); stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; }
+.mark .dt { fill: var(--accent); }
+.band .mark .ln { stroke: var(--band-ink); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 22px; border-radius: 999px; font: 600 16px/1.2 var(--font-body); text-decoration: none; border: 2px solid transparent; transition: transform .15s ease, background-color .15s ease; cursor: pointer; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { border-color: var(--band-line); color: var(--band-ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--band-muted); }
+.btn-outline { border-color: var(--brand); color: var(--brand); background: transparent; }
+.btn-arrow { width: 18px; height: 18px; flex: none; }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--header-bg); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+.nav { display: flex; gap: 28px; }
+.nav a { text-decoration: none; font-size: 15px; font-weight: 500; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+.top .btn { min-height: 42px; padding: 9px 18px; font-size: 15px; }
+@media (max-width: 860px) { .nav { display: none; } }
+@media (max-width: 380px) { .top .btn { padding-inline: 14px; font-size: 14px; } .top .lockup { font-size: 19px; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Hero (cover slide) */
+.hero { padding-block: clamp(56px, 8vw, 104px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 40px; align-items: center; position: relative; z-index: 1; }
+.hero-text { display: grid; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(56px, 10vw, 112px); line-height: 1; color: var(--band-ink); }
+.hero .sub { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.35; max-width: 22ch; }
+.hero .slogan { font-size: 18px; line-height: 1.5; color: var(--band-muted); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.hero-mark { justify-self: center; width: min(100%, 300px); }
+.hero-mark svg { width: 100%; height: auto; display: block; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 6px 0 0; padding: 0; list-style: none; font-size: 15px; color: var(--band-muted); }
+.facts li { display: flex; align-items: center; gap: 8px; }
+.facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.waves { position: absolute; right: -60px; bottom: -40px; width: min(70vw, 620px); height: auto; pointer-events: none; opacity: .5; }
+.waves path { fill: none; stroke: var(--band-muted); stroke-width: 1.1; opacity: .55; }
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-mark { display: none; }
+}
+
+/* Founders */
+.founders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 32px); }
+.person { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: start; padding: 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.person img { width: 200px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; background: var(--card); display: block; max-width: 100%; }
+.person .who { display: grid; gap: 6px; min-width: 0; }
+.person h3 { font-size: 26px; }
+.person p { margin-top: 6px; font-size: 16px; color: var(--ink); }
+@media (max-width: 900px) { .founders { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .person { grid-template-columns: 1fr; } .person img { width: 100%; max-width: 320px; } }
+
+/* Solution */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.chip { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 16px 20px; border-radius: 20px; background: var(--card); font: 600 18px/1.25 var(--font-display); color: var(--brand); letter-spacing: -0.01em; }
+.chip svg { width: 28px; height: 28px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
+@media (max-width: 380px) { .chips { grid-template-columns: 1fr; } }
+
+/* Benefit table */
+.cmp { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr) minmax(0, 1.3fr); border-top: 1px solid var(--line); }
+.cmp .r { display: contents; }
+.cmp .c { padding: 18px 20px; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.45; min-width: 0; }
+.cmp .lbl { font-weight: 600; padding-left: 0; }
+.cmp .va { background: var(--card); }
+.cmp .hd { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-top: 0; }
+.cmp .hd.va { color: var(--brand); border-radius: var(--radius) var(--radius) 0 0; }
+.cmp .last.va { border-radius: 0 0 var(--radius) var(--radius); border-bottom-color: transparent; }
+.cmp .price { font: 600 26px/1.15 var(--font-display); letter-spacing: -0.02em; }
+.cmp .va.price { color: var(--brand); }
+.cmp .mini { display: none; }
+@media (max-width: 700px) {
+  .cmp { grid-template-columns: 1fr 1fr; gap: 0 10px; border-top: 0; }
+  .cmp .hd { display: none; }
+  .cmp .lbl { grid-column: 1 / -1; padding: 22px 0 10px; border-bottom: 0; font-size: 15px; }
+  .cmp .c:not(.lbl) { border-radius: 16px; border-bottom: 0; padding: 14px; background: var(--surface); border: 1px solid var(--line); }
+  .cmp .c.va { background: var(--card); border-color: transparent; }
+  .cmp .last.va { border-radius: 16px; }
+  .cmp .mini { display: block; font: 600 11px/1.3 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .cmp .va .mini { color: var(--brand); }
+  .cmp .price { font-size: 22px; }
+}
+
+/* Services */
+.cards4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.svc { background: var(--card); border-radius: var(--radius); padding: 24px; display: grid; gap: 14px; align-content: start; }
+.svc .n { font: 600 14px/1 var(--font-display); color: var(--brand); font-variant-numeric: tabular-nums; }
+.svc h3 { font-size: 21px; }
+.svc ul, .pkg ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.svc li, .pkg li { position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.45; }
+.svc li::before, .pkg li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-2); }
+.tools { margin-top: 24px; }
+@media (max-width: 1000px) { .cards4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cards4 { grid-template-columns: 1fr; } }
+
+/* Packages */
+.pkgs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.pkg { border-radius: var(--radius); padding: 28px 26px; background: var(--card); display: flex; flex-direction: column; gap: 18px; }
+.pkg .name { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.pkg h3 { font-size: 24px; }
+.badge { font: 600 12px/1 var(--font-body); padding: 7px 12px; border-radius: 999px; background: var(--accent); color: var(--on-accent); white-space: nowrap; }
+.pkg .price { display: grid; gap: 4px; }
+.pkg .price b { font: 600 clamp(44px, 5vw, 56px)/1 var(--font-display); letter-spacing: -0.03em; color: var(--brand); font-variant-numeric: tabular-nums; }
+.pkg .price span { font-size: 15px; color: var(--muted); }
+.pkg li.new { font-weight: 600; }
+.pkg li.new::before { background: var(--accent); }
+.pkg ul { flex: 1; align-content: start; }
+.pkg .btn { width: 100%; }
+.pkg.pop { background: var(--band); color: var(--band-ink); }
+.pkg.pop .price b { color: var(--band-ink); }
+.pkg.pop .price span { color: var(--band-muted); }
+.pkg.pop li::before { background: var(--band-muted); }
+.pkg.pop li.new::before { background: var(--accent); }
+.pkg .btn-outline { border-color: var(--brand); color: var(--brand); }
+.legend { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+.legend i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.pkg-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin-top: 20px; }
+@media (max-width: 900px) { .pkgs { grid-template-columns: 1fr; max-width: 520px; } }
+
+/* Contact band */
+.cta .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 40px; align-items: start; }
+.cta h2 { color: var(--band-ink); }
+.contacts { display: grid; gap: 2px; margin: 0; }
+.contacts div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; align-items: center; padding-block: 12px; border-bottom: 1px solid var(--band-line); }
+.contacts dt { font-size: 14px; color: var(--band-muted); }
+.contacts dd { margin: 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-width: 0; font-weight: 500; overflow-wrap: anywhere; }
+.contacts a { color: var(--band-ink); text-decoration-color: var(--accent); text-underline-offset: 4px; }
+.todo { color: var(--band-muted); font-weight: 400; font-style: italic; }
+.copy { font: 500 13px/1 var(--font-body); padding: 7px 12px; border-radius: 999px; border: 1px solid var(--band-line); background: transparent; color: var(--band-ink); cursor: pointer; }
+.book { background: var(--bg); color: var(--ink); border-radius: var(--radius); padding: 28px; display: grid; gap: 16px; }
+.book h3 { font-size: 22px; }
+.book p { color: var(--muted); font-size: 16px; }
+.book .btn { width: 100%; }
+.slogan-row { display: grid; gap: 16px; margin-top: clamp(40px, 6vw, 64px); }
+.slogan-row strong { font: 600 clamp(22px, 2.6vw, 30px)/1.25 var(--font-display); letter-spacing: -0.01em; }
+@media (max-width: 820px) { .cta .wrap { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .contacts div { grid-template-columns: 1fr; gap: 4px; } }
+
+footer { padding-block: 32px; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; font-size: 14px; color: var(--muted); }
+footer .lockup { font-size: 18px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="va-mark" viewBox="0 0 106 100">
+      <path class="ln" d="M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2"/>
+      <circle class="dt" cx="66" cy="62" r="6.3"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="#top" aria-label="VA Group, back to top">
+      <svg class="mark" viewBox="0 0 106 100" aria-hidden="true"><path class="ln" d="M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2"/><circle class="dt" cx="66" cy="62" r="6.3"/></svg>
+      <span>VA Group</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#benefit">Benefits</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#team">Team</a>
+    </nav>
+    <a class="btn btn-primary js-book" href="#contact">Book a consultation</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Cover -->
+  <section class="band hero" aria-labelledby="hero-title">
+    <svg class="waves js-waves" viewBox="0 0 620 360" aria-hidden="true"></svg>
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="rule"></div>
+        <p class="eyebrow">Virtual assistants · London</p>
+        <h1 id="hero-title">VA Group</h1>
+        <p class="sub">A virtual assistant for your business in London</p>
+        <p class="slogan">We handle the routine.<br>You focus on strategy.</p>
+        <div class="actions">
+          <a class="btn btn-primary js-book" href="#contact">Book a free consultation
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#packages">See packages</a>
+        </div>
+        <ul class="facts">
+          <li>From £250 a month</li>
+          <li>Start within a week</li>
+          <li>English · Ukrainian · Russian</li>
+        </ul>
+      </div>
+      <div class="hero-mark" aria-hidden="true">
+        <svg class="mark" viewBox="0 0 106 100"><path class="ln" d="M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2"/><circle class="dt" cx="66" cy="62" r="6.3"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Benefit -->
+  <section class="section" id="benefit" aria-labelledby="benefit-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The benefit</p>
+        <h2 id="benefit-title">An in-house assistant’s tasks — 2–9× cheaper</h2>
+      </div>
+      <div class="cmp" role="table" aria-label="In-house assistant compared with VA Group">
+        <div class="r" role="row">
+          <div class="c hd lbl" role="columnheader"><span class="sr">Compared</span></div>
+          <div class="c hd" role="columnheader">In-house assistant</div>
+          <div class="c hd va" role="columnheader">VA Group</div>
+        </div>
+        <div class="r" role="row">
+          <div class="c lbl" role="rowheader">Monthly cost</div>
+          <div class="c price" role="cell"><span class="mini">In-house</span>from £2,360</div>
+          <div class="c va price" role="cell"><span class="mini">VA Group</span>from £250</div>
+        </div>
+        <div class="r" role="row">
+          <div class="c lbl" role="rowheader">Hiring</div>
+          <div class="c" role="cell"><span class="mini">In-house</span>4–8 weeks, agency fee of 15–20% of annual salary</div>
+          <div class="c va" role="cell"><span class="mini">VA Group</span>Consultation and start within a week</div>
+        </div>
+        <div class="r" role="row">
+          <div class="c lbl" role="rowheader">Tax and pension</div>
+          <div class="c" role="cell"><span class="mini">In-house</span>Employer NI 15%, pension 3%</div>
+          <div class="c va" role="cell"><span class="mini">VA Group</span>Included in the price</div>
+        </div>
+        <div class="r" role="row">
+          <div class="c lbl" role="rowheader">Holiday and sick leave</div>
+          <div class="c" role="cell"><span class="mini">In-house</span>28 days of paid holiday</div>
+          <div class="c va" role="cell"><span class="mini">VA Group</span>Pay only for hours worked</div>
+        </div>
+        <div class="r" role="row">
+          <div class="c lbl" role="rowheader">Workload</div>
+          <div class="c" role="cell"><span class="mini">In-house</span>Full-time pay, even when there is less work</div>
+          <div class="c va last" role="cell"><span class="mini">VA Group</span>From 10 hours a month, adjustable monthly</div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:20px">In-house: full time, 37.5 hours a week at the National Living Wage of £12.71/hour from April 2026, plus NI and pension, excluding hiring costs.</p>
+    </div>
+  </section>
+
+  <!-- 3. Solution -->
+  <section class="section" aria-labelledby="solution-title">
+    <div class="wrap split">
+      <div class="stack">
+        <p class="eyebrow">The solution</p>
+        <h2 id="solution-title">VA Group handles the routine</h2>
+        <p class="lead">We are virtual assistants based in London. We manage your calendar and inbox, find new clients and build your social media. You pay only for the hours you need and focus on strategy.</p>
+        <p class="note">We work in English, Ukrainian and Russian.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Calendar</div>
+        <div class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>Email</div>
+        <div class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg>Finding clients</div>
+        <div class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg>Social media</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Services -->
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">Our areas</h2>
+      </div>
+      <div class="cards4">
+        <article class="svc">
+          <span class="n">01</span>
+          <h3>Calendar and meetings</h3>
+          <ul><li>Manage your calendar and schedule meetings</li><li>Send reminders</li><li>Book travel, tables and meeting rooms</li><li>Prepare agendas</li></ul>
+        </article>
+        <article class="svc">
+          <span class="n">02</span>
+          <h3>Email and correspondence</h3>
+          <ul><li>Sort your inbox</li><li>Reply using agreed templates</li><li>Handle correspondence with clients and suppliers</li><li>Prepare and send documents</li></ul>
+        </article>
+        <article class="svc">
+          <span class="n">03</span>
+          <h3>Finding clients</h3>
+          <ul><li>Ideal client profile and contact list</li><li>First messages by email, LinkedIn and Instagram</li><li>Follow-ups and booking meetings</li><li>CRM management</li></ul>
+        </article>
+        <article class="svc">
+          <span class="n">04</span>
+          <h3>Social media</h3>
+          <ul><li>Profile audit</li><li>SMM strategy and monthly content plan</li><li>Posting to schedule</li><li>Replies to comments and messages, report</li></ul>
+        </article>
+      </div>
+      <p class="note tools">We work in your tools: Google Workspace, Outlook, Calendly, Canva, Meta Business Suite, CRM.</p>
+    </div>
+  </section>
+
+  <!-- 5. Packages -->
+  <section class="section" id="packages" aria-labelledby="packages-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Packages</p>
+        <h2 id="packages-title">Choose your level of support</h2>
+      </div>
+      <div class="pkgs">
+        <article class="pkg">
+          <div class="name"><h3>Start</h3></div>
+          <div class="price"><b>£250</b><span>per month · 10 hours</span></div>
+          <ul><li>Admin</li><li>Email assistance</li><li>Research</li><li>Calendar + documents management</li></ul>
+          <a class="btn btn-outline js-book" href="#contact">Book a consultation</a>
+        </article>
+        <article class="pkg pop">
+          <div class="name"><h3>Business</h3><span class="badge">Most popular</span></div>
+          <div class="price"><b>£500</b><span>per month · 20 hours</span></div>
+          <ul><li>Admin</li><li>Email assistance</li><li>Research</li><li>Calendar + documents management</li><li class="new">Social media support</li><li class="new">Client follow-ups</li></ul>
+          <a class="btn btn-primary js-book" href="#contact">Book a consultation</a>
+        </article>
+        <article class="pkg">
+          <div class="name"><h3>Growth</h3></div>
+          <div class="price"><b>£1,000</b><span>per month · 40 hours</span></div>
+          <ul><li>Admin</li><li>Email assistance</li><li>Research</li><li>Calendar + documents management</li><li>Social media support</li><li class="new">CRM</li><li class="new">Client + customer communication</li><li class="new">AI automation</li></ul>
+          <a class="btn btn-outline js-book" href="#contact">Book a consultation</a>
+        </article>
+      </div>
+      <div class="pkg-foot">
+        <p class="note">£25 an hour. No VAT charged. Pay monthly, no long-term contract.</p>
+        <p class="legend"><i aria-hidden="true"></i>Added in this package</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Next step -->
+  <section class="band section cta" id="contact" aria-labelledby="contact-title">
+    <svg class="waves js-waves" viewBox="0 0 620 360" aria-hidden="true"></svg>
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow">Next step</p>
+        <h2 id="contact-title">Let’s start with a free consultation</h2>
+        <p class="lead" style="color:var(--band-muted)">30 minutes: we’ll look at your tasks, work out how many hours you need and choose a package.</p>
+        <dl class="contacts">
+          <div><dt>Telegram</dt><dd id="c-telegram"></dd></div>
+          <div><dt>Email</dt><dd id="c-email"></dd></div>
+          <div><dt>Instagram</dt><dd id="c-instagram"></dd></div>
+        </dl>
+        <div class="slogan-row">
+          <div class="rule"></div>
+          <strong>We handle the routine. You focus on strategy.</strong>
+        </div>
+      </div>
+      <div class="book">
+        <h3>Book a consultation</h3>
+        <p>Pick a time that suits you. The call is free and takes 30 minutes.</p>
+        <a class="btn btn-primary" id="c-calendly" href="#contact">Choose a time</a>
+        <p class="todo" id="c-calendly-todo" hidden style="color:var(--muted)">Booking link coming soon. Message us on Instagram in the meantime.</p>
+      </div>
+    </div>
+  </section>
+  <!-- 7. Team -->
+  <section class="section" id="team" aria-labelledby="team-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Team</p>
+        <h2 id="team-title">Your business&nbsp;— our support</h2>
+      </div>
+      <div class="founders">
+        <article class="person">
+          <img src="img/anastasiia.jpg" alt="Anastasiia, co-founder of VA Group" width="200" height="250">
+          <div class="who">
+            <h3>Anastasiia</h3>
+            <p>Executive Assistant to the CEO of a multi-business holding company (fintech, AI SaaS, recruitment), startups co-founder.</p>
+          </div>
+        </article>
+        <article class="person">
+          <img src="img/inesa.jpg" alt="Inesa, co-founder of VA Group" width="200" height="250">
+          <div class="who">
+            <h3>Inesa</h3>
+            <p>Entrepreneur with experience running a construction consulting business in Ukraine.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="lockup" href="#top" aria-label="VA Group, back to top">
+      <svg class="mark" viewBox="0 0 106 100" aria-hidden="true"><path class="ln" d="M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2"/><circle class="dt" cx="66" cy="62" r="6.3"/></svg>
+      <span>VA Group</span>
+    </a>
+    <span>Virtual assistants for small businesses · London</span>
+    <span>© 2026 VA Group</span>
+  </div>
+</footer>
+
+
+<script>
+/* Contact details — fill these in and republish. An empty contact is hidden. */
+const CONTACTS = {
+  calendly: "https://calendly.com/vagroup-inquiries/30min",
+  telegram: "",   // username without @ (e.g. "vagroup") or number with country code (e.g. "+447700900123")
+  email: "vagroup.inquiries@gmail.com",
+  instagram: "vagro.up"
+};
+
+(function () {
+  const q = (s) => document.querySelector(s);
+
+  // Telegram: username or phone number
+  const tg = q("#c-telegram");
+  if (CONTACTS.telegram) {
+    const v = CONTACTS.telegram.trim().replace(/^@/, "");
+    const isPhone = /^\+?[\d\s()-]+$/.test(v);
+    const a = document.createElement("a");
+    a.href = isPhone ? "https://t.me/+" + v.replace(/\D/g, "") : "https://t.me/" + v;
+    a.target = "_blank"; a.rel = "noopener";
+    a.textContent = isPhone ? v : "@" + v;
+    tg.appendChild(a);
+  } else tg.parentElement.hidden = true;
+
+  // Email: shown as text with a copy button (mail links are unreliable in some browsers)
+  const em = q("#c-email");
+  if (CONTACTS.email) {
+    const t = document.createElement("span"); t.textContent = CONTACTS.email;
+    const b = document.createElement("button"); b.type = "button"; b.className = "copy"; b.textContent = "Copy";
+    b.addEventListener("click", () => {
+      const done = () => { b.textContent = "Copied"; setTimeout(() => (b.textContent = "Copy"), 1600); };
+      const fallback = () => { const r = document.createRange(); r.selectNodeContents(t); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; };
+      try { navigator.clipboard.writeText(CONTACTS.email).then(done, fallback); } catch (e) { fallback(); }
+    });
+    em.append(t, b);
+  } else em.parentElement.hidden = true;
+
+  // Instagram
+  const ig = q("#c-instagram");
+  if (CONTACTS.instagram) {
+    const h = CONTACTS.instagram.replace(/^@/, "");
+    const a = document.createElement("a");
+    a.href = "https://www.instagram.com/" + h + "/"; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "@" + h; ig.appendChild(a);
+  } else ig.parentElement.hidden = true;
+
+  // Booking buttons
+  const cal = q("#c-calendly");
+  if (CONTACTS.calendly) {
+    document.querySelectorAll(".js-book, #c-calendly").forEach((a) => { a.href = CONTACTS.calendly; a.target = "_blank"; a.rel = "noopener"; });
+  } else {
+    cal.hidden = true;
+    q("#c-calendly-todo").hidden = false;
+  }
+
+  // Brand wave: a bundle of soft parallel lines, the "chaos smoothed into order" motif
+  const NS = "http://www.w3.org/2000/svg";
+  document.querySelectorAll(".js-waves").forEach((svg) => {
+    for (let i = 0; i < 11; i++) {
+      const y = 70 + i * 16, k = i * 4;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", `M0 ${y + 120} C 120 ${y + 40 - k}, 230 ${y + 150 + k}, 360 ${y + 70} S 560 ${y - 40 - k}, 640 ${y - 10}`);
+      svg.appendChild(p);
+    }
+  });
+})();
+</script>
+</body>
+</html>
