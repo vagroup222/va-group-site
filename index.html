@@ -8,7 +8,7 @@
 <meta property="og:description" content="We handle the routine. You focus on strategy. From £250 a month, start within a week.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1E5B5B">
-<meta name="site-version" content="2026-10-17.4">
+<meta name="site-version" content="2026-10-17.5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 106 100'%3E%3Cpath d='M16.6 22.8 L34.8 70.4 Q40 84 45.2 70.4 L60.8 29.6 Q66 16 71.2 29.6 L89.4 77.2' fill='none' stroke='%231E5B5B' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='66' cy='62' r='6.3' fill='%23E8795A'/%3E%3C/svg%3E">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>VA Group — Virtual assistants in London</title>
@@ -235,14 +235,14 @@ footer { padding-block: 32px; border-top: 1px solid var(--line); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; font-size: 14px; color: var(--muted); }
 footer .lockup { font-size: 18px; }
 
-/* Floating contacts: always on screen, bottom-right */
-.fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 30; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
-.fab a { position: relative; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--surface); color: var(--brand); border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(16, 40, 40, .18); text-decoration: none; transition: transform .15s ease, background-color .15s ease, color .15s ease; }
+/* Floating contacts: one row, bottom-right, raised above the "Powered by Netlify" badge (about 70px tall) */
+.fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(80px + env(safe-area-inset-bottom, 0px)); z-index: 30; display: flex; flex-direction: row; align-items: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.fab a { position: relative; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: var(--surface); color: var(--brand); border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(16, 40, 40, .18); text-decoration: none; transition: transform .15s ease, background-color .15s ease, color .15s ease; }
 .fab a:hover { transform: translateY(-2px); background: var(--brand); color: var(--bg); }
-.fab svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.fab .tip { position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); white-space: nowrap; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--bg); font: 500 13px/1.2 var(--font-body); opacity: 0; pointer-events: none; transition: opacity .15s ease; }
+.fab svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.fab .tip { position: absolute; right: 0; bottom: calc(100% + 10px); white-space: nowrap; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--bg); font: 500 13px/1.2 var(--font-body); opacity: 0; pointer-events: none; transition: opacity .15s ease; }
 @media (hover: hover) { .fab a:hover .tip, .fab a:focus-visible .tip { opacity: 1; } }
-@media (max-width: 480px) { .fab { gap: 8px; } .fab a { width: 48px; height: 48px; } .fab svg { width: 22px; height: 22px; } }
+@media (max-width: 480px) { .fab { gap: 10px; } .fab a { width: 54px; height: 54px; } .fab svg { width: 24px; height: 24px; } }
 footer { padding-bottom: calc(32px + var(--fab-h, 0px)); }
 </style>
 </head>
@@ -496,8 +496,8 @@ footer { padding-bottom: calc(32px + var(--fab-h, 0px)); }
 
 <ul class="fab" id="fab" aria-label="Contact VA Group">
   <li id="fab-telegram" hidden><a href="#contact" aria-label="Message VA Group on Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5L3 9.5z"/></svg><span class="tip">Telegram</span></a></li>
-  <li id="fab-email" hidden><a href="#contact" aria-label="Email VA Group"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="M4 7.5l8 5.5 8-5.5"/></svg><span class="tip">Email</span></a></li>
   <li id="fab-instagram" hidden><a href="#contact" aria-label="VA Group on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8.5A2.5 2.5 0 0 1 6 6h1.8l1.4-2h5.6l1.4 2H18a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 18 19H6a2.5 2.5 0 0 1-2.5-2.5z"/><circle cx="12" cy="12.5" r="3.5"/></svg><span class="tip">Instagram</span></a></li>
+  <li id="fab-email" hidden><a href="#contact" aria-label="Email VA Group"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="M4 7.5l8 5.5 8-5.5"/></svg><span class="tip">Email</span></a></li>
 </ul>
 
 
@@ -562,7 +562,7 @@ const CONTACTS = {
   if (CONTACTS.email) fab("email", "mailto:" + CONTACTS.email + "?subject=" + encodeURIComponent("Enquiry from the VA Group website"), CONTACTS.email, false);
   if (CONTACTS.instagram) { const h = CONTACTS.instagram.replace(/^@/, ""); fab("instagram", "https://www.instagram.com/" + h + "/", "@" + h, true); }
   // Keep the end of the page clear of the buttons
-  const fabSpace = () => document.documentElement.style.setProperty("--fab-h", (q("#fab").offsetHeight + 16) + "px");
+  const fabSpace = () => document.documentElement.style.setProperty("--fab-h", Math.max(0, Math.round(innerHeight - q("#fab").getBoundingClientRect().top + 8)) + "px");
   fabSpace(); addEventListener("resize", fabSpace);
 
   // Booking buttons
